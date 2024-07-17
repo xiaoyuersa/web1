@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="Zh-CN">
+
+<!-- 以下为版权信息声明。 -->
+<!-- 本网站归属于——“$ÎMÞ1∈！”群聊（162603330）的群主“Data-19C”（2109019480）所有  -->
+<!-- 本网站由“我以月色为剑” （1778290134）提出项目 -->
+<!-- 本网站由开发者“我以月色为剑” （1778290134）完成开发-->
+<!-- 本网站由“Name”（QQ Number）完成美术设计 -->
+<!-- 本网站由“Name”（QQ Number）完成开发完成后的监督运行工作 -->
+<!-- 如无许可，禁止以任何形式对本网站内（包括本网站）的除字体外的所有资源进行以任何形式的侵权行为 -->
+<!-- 如无许可，禁止以任何形式对本网站内（包括本网站）的除字体外的所有资源进行以任何形式的侵权行为 -->
+<!-- 如无许可，禁止以任何形式对本网站内（包括本网站）的除字体外的所有资源进行以任何形式的侵权行为 -->
+<!-- 感谢所有为本网站做出努力的所有人 -->
+<!-- 版权信息声明结束 -->
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$ÎMÞ1∈！</title>
+    <link rel="icon" href="icons/round_corner_image_by_atool.png">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="swiper_js_and_css/swiper-11.0.3/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+    <!-- 白色导航 开始 -->
+
+    <div class="white-nav">
+        <div class="logo">
+            <img src="icons/teams_icons.jpg" alt="" class="logo-photo">
+            <p>$ÎMÞ1∈!</p>
+        </div>
+        <div class="nav-bar">
+            <ul>
+                <li>
+                    <div>
+                        <ul>
+                            <li class="nav-bar-son"><span>|</span><a href="#">主页</a><span>|</span></li>
+                            <li class="nav-bar-son"><span>|</span><a href="#">群主</a><span>|</span></li>
+                            <li class="nav-bar-son"><span>|</span><a href="#">管理员</a><span>|</span></li>
+                            <li class="join-father">
+                                <span>|</span><a
+                                    href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=Cu3yRjMNP6qlUEqz4drg3dPzUOJRTxMV&authKey=6F9x0z2p9JvEwg3MqkEgr0uRV32qefdk8KA9aOCwSonLRuUK5AJ3umB7Ln3xFKu3&noverify=0&group_code=162603330"
+                                    target="_blank">加入我们</a><span>|</span>
+                                <div class="join">
+                                    <img src="images/code.png" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 白色导航 结束 -->
+
+    <!-- 宣传 开始 -->
+
+    <div class="banner">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/background/IMG_20240717_115151.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/background/IMG_20240717_115214.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/background/IMG_20240717_115224.jpg" alt="">
+                </div>
+            </div>
+            <div class="autoplay-progress">
+                <svg viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20"></circle>
+                </svg>
+                <span></span>
+            </div>
+        </div>
+        <!-- 标题部分 开始 -->
+
+        <div class="banner-title">
+            <div class="title">
+                <p>Welcome To $ÎMÞ1∈!</p>
+            </div>
+        </div>
+
+        <!-- 标题部分 结束 -->
+    </div>
+
+    <!-- 宣传 结束 -->
+
+    <script src="swiper_js_and_css/swiper-11.0.3/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const progressCircle = document.querySelector(".autoplay-progress svg");
+        const progressContent = document.querySelector(".autoplay-progress span");
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            on: {
+                autoplayTimeLeft(s, time, progress) {
+                    progressCircle.style.setProperty("--progress", 1 - progress);
+                    progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+                }
+            }
+        });       
+    </script>
+</body>
+
+</html>
